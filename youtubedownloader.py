@@ -1,24 +1,15 @@
-from pytube import YouTube
+noun = input('Выберите существительное: ')
+p_noun = input('Выберите сущ. во мн.ч.: ')
+noun2 = input('Выберите существительное: ')
+place = input('Назовите место: ')
+adjective = input('Выберите прилагательное: ')
+noun3 = input('Выберите существительное: ')
 
-
-def video_downloader(video_url):
-   
-    my_video = YouTube(video_url)
-    
-    my_video.streams.get_highest_resolution().download()
-    
-    return my_video.title
-
-try:
-    
-    youtube_link = input('Enter the YouTube link:')
-    print(f'Downloading your Video, please wait.......')
-    
-    video = video_downloader(youtube_link)
-    
-    print(f'"{video}" downloaded succussfully!!')
-
-except:
-    print(f'Failed to download video\nThe '\
-          'following might be the causes\n->No internet '\
-          'connection\n->Invalid video link')
+print('------------------------------------------')
+print('полезно есть', noun, '- а еще полезнее', p_noun)
+print('всегда есть под рукой', noun2, ',')
+print('как же бесят эти', p_noun, 'в', place)
+print('ты очень', adjective, '. \n')
+print('Ты можешь подумать что это', noun3, ',')
+print('Но это не правда.')
+print('------------------------------------------')
